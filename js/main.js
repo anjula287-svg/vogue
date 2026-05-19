@@ -65,7 +65,7 @@ function submitOrder(event) {
   const items = cart.map(i => `${i.name} x${i.qty}`).join(', ');
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   const message = `Hello VOGUE, I would like to place an order.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AItems: ${encodeURIComponent(items)}%0ATotal: LKR ${total}%0ANote: ${encodeURIComponent(note)}`;
-  const whatsapp = `https://wa.me/94770000000?text=${message}`;
+  const whatsapp = `https://wa.me/94778664145?text=${message}`;
   window.open(whatsapp, '_blank');
 }
 
