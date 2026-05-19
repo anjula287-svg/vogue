@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOGUE | DTF Printed Clothing</title>
+<meta name="description" content="Modern DTF printed clothing brand website for custom apparel orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Image size eka auto adjust wenna hadala thiyenawa */
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+  }
+  .product-card h3 { display: none; } /* Product names ain kara */
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpeg" alt="VOGUE logo" class="brand-logo">
+      <div class="brand-text">
+        <span>VOGUE</span>
+        <small>By Pasini Ruwanthika</small>
+      </div>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="custom-order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="custom-order.html" class="cart-pill">Cart <span id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page-top">
+  <div class="section-heading">
+    <span class="eyebrow">Products</span>
+    <h1>Choose ready-made products or add them to your order.</h1>
+    <p>Browse our latest DTF printed collection below.</p>
+  </div>
+
+  <div class="toolbar">
+    <input id="searchInput" type="search" placeholder="Search products..." oninput="filterProducts()">
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All Categories</option>
+      <option value="tees">Tees</option>
+      <option value="hoodies">Hoodies</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <article class="product-card" data-name="Forlorn Heart" data-category="tees">
+      <img src="assets/WhatsApp Image 2026-05-19 at 07.15.27.jpeg" alt="Forlorn Heart Tee" class="product-image">
+      <strong>LKR 2,490</strong>
+      <button class="btn primary" onclick="addToCart('Product 1', 2490)">Add to Order</button>
+    </article>
+
+    <article class="product-card" data-name="Kakashi" data-category="tees">
+      <img src="assets/WhatsApp Image 2026-05-19 at 07.15.28.jpeg" alt="Kakashi Tee" class="product-image">
+      <strong>LKR 2,990</strong>
+      <button class="btn primary" onclick="addToCart('Product 2', 2990)">Add to Order</button>
+    </article>
+
+    <article class="product-card" data-name="Cultural Angels" data-category="tees">
+      <img src="assets/WhatsApp Image 2026-05-19 at 07.15.28 (1).jpeg" alt="Cultural Angels Tee" class="product-image">
+      <strong>LKR 2,990</strong>
+      <button class="btn primary" onclick="addToCart('Product 3', 2990)">Add to Order</button>
+    </article>
+
+    <article class="product-card" data-name="All Eyes on Me" data-category="tees">
+      <img src="assets/WhatsApp Image 2026-05-19 at 07.15.28 (2).jpeg" alt="Eye Tee" class="product-image">
+      <strong>LKR 2,750</strong>
+      <button class="btn primary" onclick="addToCart('Product 4', 2750)">Add to Order</button>
+    </article>
+
+    <article class="product-card" data-name="Mentality" data-category="tees">
+      <img src="assets/WhatsApp Image 2026-05-19 at 07.15.28 (3).jpeg" alt="Mentality Tee" class="product-image">
+      <strong>LKR 2,990</strong>
+      <button class="btn primary" onclick="addToCart('Product 5', 2990)">Add to Order</button>
+    </article>
+
+    <article class="product-card" data-name="Money Bear" data-category="tees">
+      <img src="assets/WhatsApp Image 2026-05-19 at 07.15.28 (5).jpeg" alt="Money Bear Tee" class="product-image">
+      <strong>LKR 2,850</strong>
+      <button class="btn primary" onclick="addToCart('Product 6', 2850)">Add to Order</button>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>VOGUE</h3>
+      <p>Modern clothing brand for DTF printed apparel.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+94 77 866 4145">+94 77 866 4145</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© <span id="year"></span> VOGUE. All rights reserved.</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
